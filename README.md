@@ -69,8 +69,12 @@ Vuelo : BOG -> BGA
 Día: Lunes   
 Salida: 23:50   
 Llegada: 00:59   
-Duración: 1:09:00         
+Duración: 1:09:00    
 
+
+****
+En el archivo database.py, se almacenó una lista de diccionarios, donde cada diccionario representa un vuelo. Esta estructura permite que los datos de los vuelos sean fácilmente gestionables y, a futuro, puedan ser almacenados en una base de datos para facilitar su manejo y consulta.
+****
 
 
 ## **Interfaz Web**
