@@ -78,7 +78,7 @@ def main():
     #Parametros del sistema -  Tiempo mínimo entre conexiones (40 a 60 mintos en promedio) - Tiempo máximo  que se permite entre conexiones (ejemplo 13 horas)
 
     min_connection_interval: timedelta = timedelta(minutes=40)  # Tiempo mínimo 
-    max_connection_interval: timedelta = timedelta(hours=13) # Tiempo máximo 
+    max_connection_interval: timedelta = timedelta(hours=24) # Tiempo máximo 
     
 
     

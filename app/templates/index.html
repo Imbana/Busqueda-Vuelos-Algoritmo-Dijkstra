@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Pago Airlines</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='img/LogofinalPDP.svg') }}" alt="" srcset="">
+        <div class="logo">PPA Airlines</div>
+        <div class="header-right">
+            <div class="currency">
+                <span></span>
+                <span>Punto de Pago Air</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-options">
+            <label class="option-btn"># Solo ida </label>
+            <label class="option-btn"># Economy </label>
+            <label class="option-btn"># 1 pasajero </label>
+
+        </div>
+
+        <form class="search-form" id="flightSearchForm">
+            <div class="select-container">
+                <select class="search-input" id="origin" required>
+                    <option value="">Seleccione origen</option>
+                    {% for city in cities %}
+                    <option value="{{ city.code }}">{{ city.name }}, {{ city.code }} - {{ city.country }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="select-container">
+                <select class="search-input" id="destination" required>
+                    <option value="">Seleccione destino</option>
+                    {% for city in cities %}
+                    <option value="{{ city.code }}">{{ city.name }}, {{ city.code }} - {{ city.country }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <input type="date" class="search-input" id="flightDate" required>
+            <button type="submit" class="search-btn">Buscar</button>
+        </form>
+    </div>
+
+    <div class="flights-container">
+        <div class="flights-header">
+            <h2>Elige un vuelo de ida</h2>
+            <div>
+                Ordenado por: 
+                <button class="option-btn">Duración de vuelo</button>
+            </div>
+        </div>
+
+        <div id="flightsResults"></div>
+    </div>
+
+    <template id="flightCardTemplate">
+        <div class="flight-card">
+            <div class="flight-card-header">
+                <span class="tag">Recomendado</span>
+                <span class="tag economic">Más económico</span>
+            </div>
+            <div class="flight-times">
+                <div class="time departure-time"></div>
+                <div class="duration">
+                    <div>Duración</div>
+                    <div class="duration-time"></div>
+                </div>
+                <div class="time arrival-time"></div>
+            </div>
+            <div class="flight-footer">
+                <div class="operator">
+                    <span class="stops"></span><br>
+                    Operado por <span class="operator-name"></span>
+                </div>
+                <div class="routes ">
+                    <div>
+                         <span>orgine: CLI </span><br>
+                         <span>fin :BGOG </span><br>
+                         <span>duracion: 3HOr </span>
+                    </div>
+                    <span>-</span>
+                    <div >
+                         <span>orgine: CLI </span><br>
+                         <span>fin :BGOG </span><br>
+                         <span>duracion: 3HOr </span>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="price-label">Tarifa desde</div>
+                    <div class="price-amount"></div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

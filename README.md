@@ -16,7 +16,7 @@ El código está optimizado para manejar tiempos de transbordo de menos de 24 ho
 
 ---
 
-## **Parámetros Requeridos:**
+**Parámetros Requeridos:**
 
 1. **Código de Aeropuerto de Inicio** (origen): El código del aeropuerto de partida (por ejemplo, "BOG, MDE, BAQ, BGA, SMR, CTG, CLO y EOH").
 2. **Código de Aeropuerto de Destino** (destino): El código del aeropuerto de llegada (por ejemplo, "BOG, MDE, BAQ, BGA, SMR, CTG, CLO y EOH").
@@ -24,7 +24,7 @@ El código está optimizado para manejar tiempos de transbordo de menos de 24 ho
 
 ---
 
-## **Parámetros Opcionales:**
+**Parámetros Opcionales:**
 
 - **Tiempo Máximo de Espera entre Escalas**: Tiempo máximo permitido entre vuelos consecutivos. Se debe ingresar en formato "HH:MM". Valor predeterminado: `13:00` (13 horas).
 - **Tiempo Mínimo de Espera entre Escalas**: Tiempo mínimo permitido entre vuelos consecutivos. Se debe ingresar en formato "HH:MM". Valor predeterminado: `00:40` (40 minutos).
@@ -42,9 +42,12 @@ El código está optimizado para manejar tiempos de transbordo de menos de 24 ho
 2.  **Una vez clonado el repositorio, navega al directorio del proyecto:**
     ```bash
         cd Busqueda-Vuelos-Algoritmo-Dijkstra
-  
-   
-3.  **Configuración de Parámetros en main.py**
+
+3.  **Instalar Dependencias**
+    ```bash
+        pip install -r requirements.txt 
+    
+4.  **Configuración de Parámetros en main.py**
     ```bash
        origin = "BOG"  # Código del aeropuerto de origen
        destination = "BGA"  # Código del aeropuerto de destino
@@ -53,6 +56,34 @@ El código está optimizado para manejar tiempos de transbordo de menos de 24 ho
        min_connection_time = timedelta(minutes=40)  # Tiempo mínimo entre escalas (por defecto 40 minutos)
        max_connection_time = timedelta(hours=13)  # Tiempo máximo entre escalas (por defecto 13 horas)
     
-4.  **Ejecutar el Código**
+5.  **Ejecuta el siguiente comando en tu terminal:**
     ```bash
-      python main.py
+        python main.py
+
+Salida
+
+=== Ruta 1 ===  
+
+Duración total: 1:09:00    
+Vuelo : BOG -> BGA       
+Día: Lunes   
+Salida: 23:50   
+Llegada: 00:59   
+Duración: 1:09:00         
+
+
+
+## **Interfaz Web**
+Para facilitar la interacción con el sistema a través de una interfaz web, se ha creado un archivo index.html, el cual se expone mediante Flask. Si deseas ver la funcionalidad en un sitio web, debes ejecutar la aplicación Flask.
+
+1.  **Ejecuta el siguiente comando en tu terminal:**
+    ```bash
+        python run.py 
+
+2.  **En la terminal, se mostrará el puerto en el que se está ejecutando el servidor. Generalmente, la aplicación estará disponible en http://127.0.0.1:5000/  abrir la url en un navegador.**
+
+
+![Mi imagen](web1.png)
+
+
+![Mi imagen2](web2.png)
