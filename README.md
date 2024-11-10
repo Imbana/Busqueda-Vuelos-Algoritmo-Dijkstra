@@ -49,12 +49,18 @@ El código está optimizado para manejar tiempos de transbordo de menos de 24 ho
     
 4.  **Configuración de Parámetros en main.py**
     ```bash
-       origin = "BOG"  # Código del aeropuerto de origen
-       destination = "BGA"  # Código del aeropuerto de destino
-       date = datetime(2024, 11, 10)  # Fecha de búsqueda
-       
-       min_connection_time = timedelta(minutes=40)  # Tiempo mínimo entre escalas (por defecto 40 minutos)
-       max_connection_time = timedelta(hours=13)  # Tiempo máximo entre escalas (por defecto 13 horas)
+    #Parametros del fronted   Código del aeropuerto de origen  - Código del aeropuerto de destino -  Fecha de la consulta
+
+    search_date =  datetime.now().replace(year=2024, month=11, day=11, hour=0, minute=0)  # Fecha de la consulta
+    origin_airport_code = "BOG"   #  origen
+    destination_airport_code = "BGA"  # destino
+
+
+    #Parametros del sistema -  Tiempo mínimo entre conexiones (40 a 60 mintos en promedio) - Tiempo máximo  que se permite entre conexiones (ejemplo 13 horas)
+
+    min_connection_interval: timedelta = timedelta(minutes=40)  # Tiempo mínimo 
+    max_connection_interval: timedelta = timedelta(hours=24) # Tiempo máximo 
+    
     
 5.  **Ejecuta el siguiente comando en tu terminal:**
     ```bash
