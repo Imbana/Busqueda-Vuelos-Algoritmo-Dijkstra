@@ -80,6 +80,9 @@ En el archivo database.py, se almacenó una lista de diccionarios, donde cada di
 ## **Interfaz Web**
 Para facilitar la interacción con el sistema a través de una interfaz web, se ha creado un archivo index.html, el cual se expone mediante Flask. Si deseas ver la funcionalidad en un sitio web, debes ejecutar la aplicación Flask.
 
+El diseño de la interfaz se basó en el sitio web de Latam debido a limitaciones de tiempo.
+
+
 1.  **Ejecuta el siguiente comando en tu terminal:**
     ```bash
         python run.py 
