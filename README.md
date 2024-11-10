@@ -2,7 +2,7 @@
 
 **Descripción:**
 
-Este proyecto implementa un algoritmo de búsqueda de rutas de vuelos utilizando el algoritmo de Dijkstra para encontrar las mejores alternativas de vuelos entre varios aeropuertos. El código permite ingresar parámetros obligatorios como el código del aeropuerto de origen, el código del aeropuerto de destino y la fecha de búsqueda, mientras que también ofrece filtros opcionales como el tiempo máximo y mínimo de espera entre escalas.
+Este proyecto implementa un algoritmo de búsqueda de rutas de vuelos utilizando el algoritmo de Dijkstra para encontrar las mejores alternativas de vuelos entre varios aeropuertos. El código permite ingresar parámetros obligatorios como el código del aeropuerto de origen, el código del aeropuerto de destino y la fecha de búsqueda, mientras que también ofrece  opcionales como el tiempo máximo y mínimo de espera entre escalas.
 
 
 
