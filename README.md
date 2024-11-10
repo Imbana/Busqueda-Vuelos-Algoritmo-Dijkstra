@@ -43,11 +43,8 @@ El código está optimizado para manejar tiempos de transbordo de menos de 24 ho
     ```bash
         cd Busqueda-Vuelos-Algoritmo-Dijkstra
   
-4.  **Instalar Dependencias**
-    ```bash
-       pip install -r requirements.txt
    
-6.  **Configuración de Parámetros en main.py**
+3.  **Configuración de Parámetros en main.py**
     ```bash
        origin = "BOG"  # Código del aeropuerto de origen
        destination = "BGA"  # Código del aeropuerto de destino
@@ -56,6 +53,6 @@ El código está optimizado para manejar tiempos de transbordo de menos de 24 ho
        min_connection_time = timedelta(minutes=40)  # Tiempo mínimo entre escalas (por defecto 40 minutos)
        max_connection_time = timedelta(hours=13)  # Tiempo máximo entre escalas (por defecto 13 horas)
     
-7.  **Ejecutar el Código**
+4.  **Ejecutar el Código**
     ```bash
       python main.py
